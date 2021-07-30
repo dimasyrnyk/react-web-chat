@@ -8,7 +8,7 @@ import {
   ChatEngineContext,
 } from 'react-chat-engine'
 import CheckCircleOutlineIcon from '@material-ui/icons/CheckCircleOutline'
-import { ChatCard, NewChat, Loader } from '../'
+import { ChatCard, NewChat, Loader, SearchUsers } from '../'
 import { useChat } from '../../context'
 import { useResolved } from '../../hooks'
 import './ChatList.scss'
@@ -103,28 +103,11 @@ export const ChatList = props => {
 
       {
         searching ? (
-          <>
-            {/* <SearchUsers closeSearch={() => setSearching(false)} /> */}
-            <h3 className="chat-list-title">Users</h3>
-            <div className="chat-list-co">
-              { 
-                users.length > 0 &&
-                users.filter(u => {
-                  return u.userName.toLowerCase().indexOf(value.toLowerCase()) !== -1
-                }).map(user => {
-                  return (
-                    <span
-                      className="chat-card-co"
-                      key={user.userCode}
-                      onClick={() => onDirectMessageCreate(user.userName)}
-                    >
-                      {user.userName}
-                    </span>
-                  )
-                })
-              }
-            </div>
-          </>
+          <SearchUsers
+            users={users}
+            value={value}
+            onClick={onDirectMessageCreate}
+          />
         ) : (
           <>
             <h3 className="chat-list-title">Chats</h3>
