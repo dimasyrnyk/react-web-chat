@@ -1,0 +1,41 @@
+@import '../../styles/_colors.scss';
+
+.message-co {
+    display: flex;
+    margin: 10px;
+}
+.message-co.sended {
+    justify-content: flex-end;
+}
+.message-co.received {
+    justify-content: flex-start;
+}
+.message-bubble-co {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.message-bubble-co.sended {
+    align-items: flex-end;
+}
+.message-bubble-co.received {
+    align-items: flex-start;
+}
+.message-bubble {
+    display: inline-block;
+    padding: 10px 12px;
+    border-radius: 20px;
+}
+.message-bubble.sended {
+    color: $message_text_color;
+    background-color: $message_bg_sended;
+}
+.message-bubble.received {
+    color: $main_white;
+    background-color: $message_bg_received;
+}
+.message-date {
+    margin-top: 8px;
+    font-size: 11px;
+    color: $main_gray;
+}

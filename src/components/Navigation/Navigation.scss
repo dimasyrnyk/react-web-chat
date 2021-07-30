@@ -1,0 +1,18 @@
+@import '../../styles/_colors.scss';
+
+.app-navigation {
+    height: 6vh;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $nav_bg_color;
+}
+.app-navigation h1 {
+    margin: 10px;
+    padding: 0;
+    color: $nav_logo_color;
+}
+.app-navigation button {
+    margin: 10px;
+}

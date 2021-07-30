@@ -1,0 +1,19 @@
+@import '../../styles/_colors.scss';
+
+.app-button {
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: $main_white;
+    background-color: $auth_btn_bg_color;
+}
+.app-button:hover {
+    box-shadow: 0px 0px 3px $main_black;
+}
+.app-button:disabled {
+    color: $main_darkgray;
+    cursor: not-allowed;
+    background-color: $main_gray;
+}

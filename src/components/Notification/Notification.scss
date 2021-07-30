@@ -1,0 +1,20 @@
+@import '../../styles/_colors.scss';
+
+.notification-co {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 280px;
+  height: auto;
+  background-color: $nav_bg_color;
+  color: $main_white;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.notification-title {
+  font-size: 18px;
+}

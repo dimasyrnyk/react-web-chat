@@ -1,0 +1,55 @@
+@import '../../styles/_colors.scss';
+
+.chat-left-side-co {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 94vh;
+    border-right: 1px solid $auth_input_border_color;
+}
+.chat-user-avatar {
+    display: flex;
+    padding: 10px;
+}
+.chat-user-co {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: $auth_form_bg_color;
+    border-bottom: 1px solid $auth_input_border_color;
+    height: 130px;
+    width: 100%;
+}
+.new-chat-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    border: 1px solid $auth_input_border_color;
+    background-color: $main_white;
+    margin: auto;
+    padding: 8px;
+    width: 85%;
+}
+.new-chat-input {
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: $main_white;
+    opacity: 0.6;
+}
+.search-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    background-color: $main_white;
+    cursor: pointer;
+}
+.chat-list-title {
+    font-size: 22px;
+    font-weight: 400;
+    color: $blue_text_color;
+    margin: 20px 10px;
+}

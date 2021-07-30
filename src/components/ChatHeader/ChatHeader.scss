@@ -1,0 +1,45 @@
+@import '../../styles/_colors.scss';
+
+.chat-header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: $auth_form_bg_color;
+    border-bottom: 1px solid $auth_input_border_color;
+    padding: 10px 15px;
+}
+.chat-header-title {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.2vh;
+    margin: 10px;
+}
+.user-avatar-co {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.user-avatar {    
+    height: 39px;
+    width: 39px;
+    border-radius: 100%;
+    margin-right: 6px;
+    object-fit: cover;
+}
+.status-online,
+.status-ofline {
+    position: absolute;
+    top: 26px;
+    left: 26px;
+    font-size: 3rem;
+}
+.status-online{
+    color: $ofline_color;
+}
+.status-ofline {
+    color: $online_color;
+}

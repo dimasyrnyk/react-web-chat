@@ -1,0 +1,8 @@
+@import '../../styles/_colors.scss';
+
+.chat-sidebar {
+    width: 30%;
+    height: 100%;
+    overflow-x: hidden;
+    border-right: 1px solid $chat_border_color;
+}

@@ -1,0 +1,12 @@
+@import '../../styles/_colors.scss';
+
+.chat-container {
+  width: 100%;
+}
+
+.chat-feed{
+  width: 70%;
+  height: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
