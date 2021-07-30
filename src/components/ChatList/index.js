@@ -20,7 +20,7 @@ export const ChatList = props => {
   const [users, setUsers] = useState([])
   const [searching, setSearching] = useState(false)
   const [sortedChats, setSortedChats] = useState([])
-  const { myChats, setMyChats, chatConfig } = useChat()
+  const { myChats, chatConfig } = useChat()
   const chatsResolved = useResolved(myChats)
   const { setActiveChat } = useContext(ChatEngineContext)
 
@@ -29,7 +29,7 @@ export const ChatList = props => {
     getChats(chatConfig, (chats) => {
       setSortedChats(chats.sort((a, b) => a.last_message.id + b.last_message.id))
     })
-  }, [chatsResolved, props.messages])
+  }, [chatConfig, chatsResolved, props.messages])
 
   useEffect(() => {
     const usersArr = []
@@ -43,7 +43,7 @@ export const ChatList = props => {
       if (usersArr.length > 0) setUsers(usersArr)
     })
     
-  }, []) 
+  }) 
 
   const onDirectMessageCreate = (name) => {
     const chat = { 

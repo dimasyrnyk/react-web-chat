@@ -14,7 +14,7 @@ export const ChatCard = ({ chat }) => {
 
     const hasReadLastMessage = chat => {
         let lastReadMessageID = -1
-        chat.people.map(chat_person => {
+        chat.people.forEach(chat_person => {
           if (chat_person.person.username === chatConfig.userName) {
             lastReadMessageID = chat_person.last_read
           }
